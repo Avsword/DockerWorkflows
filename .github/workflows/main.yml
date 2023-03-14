@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions: write-all
     # What are the steps to build this?
     # Currently the checkout is at v3 according to the readme.
     steps:
@@ -33,15 +34,14 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/workflows:latest
           
       # This automatically redeploys the site on render.
-      # Really unfortunate that render doesn't support docker compose.. :(
       # https://github.com/marketplace/actions/render-github-action 
       - name: Render GitHub Action
         uses: Bounceapp/render-action@0.6.0
         with:
           # Render token in secrets
-          render-token: ${{ secrets.RENDER_TOKEN }}
+          # render-token: ${{ secrets.RENDER_TOKEN }}
           # This is automatically generated
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          # github-token: ${{ secrets.GITHUB_TOKEN }}
           # This is the render.com id.
           service-id: srv-cg8908vdvk4ljrh0ei4g
           retries: 20
