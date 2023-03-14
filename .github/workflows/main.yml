@@ -39,7 +39,7 @@ jobs:
         uses: Bounceapp/render-action@0.6.0
         with:
           # Render token in secrets
-          # render-token: ${{ secrets.RENDER_TOKEN }}
+          render-token: ${{ secrets.RENDER_TOKEN }}
           # This is automatically generated
           # github-token: ${{ secrets.GITHUB_TOKEN }}
           # This is the render.com id.
