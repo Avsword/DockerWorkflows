@@ -41,7 +41,7 @@ jobs:
           # Render token in secrets
           render-token: ${{ secrets.RENDER_TOKEN }}
           # This is automatically generated
-          # github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           # This is the render.com id.
           service-id: srv-cg8908vdvk4ljrh0ei4g
           retries: 20
