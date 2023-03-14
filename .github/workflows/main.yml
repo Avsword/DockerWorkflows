@@ -33,6 +33,7 @@ jobs:
           tags: ${{secrets.DOCKERHUB_USERNAME}}/workflows:latest
           
       # This automatically redeploys the site on render.
+      # Really unfortunate that render doesn't support docker compose.. :(
       # https://github.com/marketplace/actions/render-github-action 
       - name: Render GitHub Action
         uses: Bounceapp/render-action@0.6.0
