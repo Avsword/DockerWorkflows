@@ -33,17 +33,18 @@ jobs:
           push: true
           tags: ${{secrets.DOCKERHUB_USERNAME}}/workflows:latest
           
-      # This automatically redeploys the site on render.
-      # https://github.com/marketplace/actions/render-github-action 
-      - name: Render GitHub Action
-        uses: Bounceapp/render-action@0.6.0
-        with:
+      # This... did actually not work!
+      # But render has an option of "deploy on every commit" so I'll tick that and
+      # it DOES complete the exercise
+      #- name: Render GitHub Action
+        #uses: Bounceapp/render-action@0.6.0
+        #with:
           # Render token in secrets
-          render-token: ${{ secrets.RENDER_TOKEN }}
+          #render-token: ${{ secrets.RENDER_TOKEN }}
           # This is automatically generated
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          #github-token: ${{ secrets.GITHUB_TOKEN }}
           # This is the render.com id.
-          service-id: srv-cg89f1t269vf27fgvc0g
-          retries: 20
-          wait: 16000
-          sleep: 30000
+          #service-id: srv-cg89f1t269vf27fgvc0g
+          #retries: 20
+          #wait: 16000
+          #sleep: 30000
