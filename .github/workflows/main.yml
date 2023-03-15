@@ -43,7 +43,7 @@ jobs:
           # This is automatically generated
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # This is the render.com id.
-          service-id: srv-cg8908vdvk4ljrh0ei4g
+          service-id: srv-cg89f1t269vf27fgvc0g
           retries: 20
           wait: 16000
           sleep: 30000
