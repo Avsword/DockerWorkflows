@@ -6,6 +6,7 @@ services:
     image: avsword/workflows
     ports:
       - '8080:8080'
+    command: node index.js
 
   watchtower:
     image: containrrr/watchtower
